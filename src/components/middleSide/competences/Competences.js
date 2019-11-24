@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Rating from '@material-ui/lab/Rating';
 import { connect } from 'react-redux';
-import {competencesStyle} from '../../../style';
+import './css/Competences.css';
 
-const classes = competencesStyle;
+
 
 class Competences extends Component{
     constructor(props){
@@ -19,44 +18,41 @@ class Competences extends Component{
         
         let display;
         if(titleParam==undefined){
-            //alert('titleParam undefined')
             return;
         }
         if (titleParam=='Compétences'){
-            //alert('titleParam competences')
             display=
             <Grid 
                 container 
-                //direction="column"
                 justify="center"
                 alignItems="center"
                 spacing={2}
             >
                 <Grid item xs={10} sm={5}>
-                    <Container fixed className={classes.container}>
-                        <Paper>
-                            <Typography>Dev Mobile Android</Typography>
+                    <Container fixed>
+                        <Paper className='cmpt'>
+                            <div>Dev Mobile Android</div>
                             <Rating value={6} max={10} readOnly />
                             <br/>
-                            <Typography>Java</Typography>
+                            <div>Java</div>
                             <Rating value={8} max={10} readOnly />
                             <br/>
-                            <Typography>React/Redux</Typography>
+                            <div>React/Redux</div>
                             <Rating value={7} max={10} readOnly />
                             <br/>
-                            <Typography>JavaScript/HTML/CSS</Typography>
+                            <div>JavaScript/HTML/CSS</div>
                             <Rating value={7} max={10} readOnly />
                             <br/>
-                            <Typography>NodeJS</Typography>
+                            <div>NodeJS</div>
                             <Rating value={6} max={10} readOnly />
                             <br/>
-                            <Typography>Python</Typography>
+                            <div>Python</div>
                             <Rating value={7} max={10} readOnly />
                             <br/>
-                            <Typography>Sécurité Informatique</Typography>
+                            <div>Sécurité Informatique</div>
                             <Rating value={5} max={10} readOnly />
                             <br/>
-                            <Typography>Machine Learning</Typography>
+                            <div>Machine Learning</div>
                             <Rating value={6} max={10} readOnly />
                         </Paper> 
                     </Container>

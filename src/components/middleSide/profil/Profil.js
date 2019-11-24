@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
@@ -7,11 +6,10 @@ import photo_profil from "../../../static/photo_profil.JPG";
 
 import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
-import {profileStyle,profile} from '../../../style';
+import './css/Profil.css';
 
-const classes = profileStyle;
 
-const profileS=profile;
+
 
 class Profil extends Component{
     constructor(props){
@@ -23,53 +21,53 @@ class Profil extends Component{
         
         let display;
         if(titleParam==undefined){
-            //alert('titleParam undefined')
             return;
         }
         if (titleParam=='Profil'){
-            //alert('titleParam profil')
 
             display=<div>
                 <Grid 
-                    container 
-                    //direction="column"
+                    container
                     justify="center"
                     alignItems="center"
                     spacing={2}
                 >
                     
                     <Grid item xs={10} sm={5}>
-                        <Container fixed className={classes.container}>
-                            <Paper>
+                        <Container fixed >
+                            <Paper className='paper'>
                                 
-                                <Typography variant="h3" component="h6" gutterBottom>
+                                <div className='title' >
                                     Rahiti Perodeau
                                 
-                                </Typography>
-                                <Typography variant="h6">
+                                </div>
+                                <div className='sub_title'>
                                     5e année d'école d'ingénieur à CPE Lyon
-                                </Typography>
+                                </div>
                                 <br/>
-                                <Typography>
+                                <div>
                                 Né le 9 Août 1996 (23ans)
-                                </Typography>
-                                <Typography>
+                                </div>
+                                <div>
                                     4 Rue Richelieu, 69100 Villeurbanne
-                                </Typography>
-                                <Typography>
+                                </div>
+                                <div>
                                     Email: rahiti.perodeau@cpe.fr
-                                </Typography>
-                                <Typography>
+                                </div>
+                                <div>
                                     Mobile: 07 66 17 23 78
-                                </Typography>
+                                </div>
                             </Paper>  
                         </Container>
                     </Grid>
                     <Grid item xs={10} sm={5}>
-                        <img src={photo_profil} style={profileS.avatar}/>
+                        <img src={photo_profil}/>
                     </Grid>
                     
                 </Grid>
+                
+                            
+                        
             </div>
             
             ;

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
-import {expProStyle} from '../../../style';
+import './css/ExpPro.css'
 
-const classes = expProStyle;
+
+
 
 class ExpPro extends Component{
     constructor(props){
@@ -16,49 +15,48 @@ class ExpPro extends Component{
     }
 
     isDisplayed(titleParam){
-        
         let display;
         if(titleParam==undefined){
-            //alert('titleParam undefined')
             return;
         }
         if (titleParam=='Expérience Professionnelle'){
-            //alert('titleParam exp pro')
             display=
             <div>
                 <Grid 
-                container 
+                container
                 justify="center"
                 alignItems="center"     
                 spacing={2}   
             >
-                <Grid item xs={10} sm={5}>
-                    <Container fixed className={classes.container}>
-                        <Paper >
-                            <Typography variant="h4">
+                <Grid item  xs={10} sm={5} >
+                    <Container >
+                        <Paper className='paper'>
+                            <div className='title'>
                                 Projet de développement web sémantique
-                            </Typography>
-                            <br/>
-                            <Typography variant="h5">
-                                 Fraunhofer IPK - Berlin
-                            </Typography>
-                            <Typography variant="h6">
-                            01/09/2018 –01/03/2019;
-                            </Typography>
-                            <br/>
-                            <Typography display="block">
-                            Développementd‘une application web utilisant les technologies
-                            classiques  du  développement  Web, i.e du Java JEE côté serveur,
-                            AJAX JS/HTML/CSS côté  client,  le  tout  communiquant  avec  
-                            des  Web-Services.
-                            </Typography>
-                            <br/>
-                            <Typography>
-                            Développement   d’un   système   d’assistance intelligent  basé
-                            sur  la  liaison  sémantique  des données  pour  soutenir  
-                            l’assemblage  de  petites séries  de  dispositifs  mécaniques  (turbines)
-                            pour une entreprise aéronautique.
-                            </Typography>
+                            </div>
+                            
+                            <div className='place'>
+                            Fraunhofer IPK - Berlin
+                            </div>
+                            <div className='date'>
+                            01/09/2018-01/03/2019
+                            </div>
+                            
+                            <div className='para' >
+                                <div>
+                                Développementd‘une application web utilisant les technologies
+                                Back-end et Front-End, i.e Java/SringBoot côté serveur,
+                                AJAX JS/HTML/CSS côté  client,  le  tout  communiquant  avec  
+                                des  Web-Services.
+                                </div>
+                                
+                                <div>
+                                Développement   d’un   système   d’assistance intelligent  basé
+                                sur  la  liaison  sémantique  des données  pour  soutenir  
+                                l’assemblage  de  petites séries  de  dispositifs  mécaniques  (turbines)
+                                pour une entreprise aéronautique.
+                                </div>
+                            </div>
                         </Paper>
                     </Container>
                 </Grid>
@@ -71,23 +69,25 @@ class ExpPro extends Component{
             spacing={2}   
             >
                 <Grid item xs={10} sm={5}>
-                    <Container fixed className={classes.container}>
-                        <Paper >
-                            <Typography variant="h4">
+                    <Container>
+                        <Paper className='paper'>
+                            <div className='title'>
                             Stage d’exécution
-                            </Typography>
-                            <br/>
-                            <Typography variant="h5">
+                            </div>
+                        
+                            <div className='place'>
                             EDT Engie - Polynésie française
-                            </Typography>
-                            <Typography variant="h6">
-                            07/10/2017 –08/11/2017
-                            </Typography>
-                            <br/>
-                            <Typography display="block">
-                            Réalisation d’un projet informatique sur un serveur de production industriel.
-                            Configuration d’une supervision réseau à l’aide d’un logiciel de monitoring.
-                            </Typography>
+                            </div>
+                            <div className='date'>
+                            07/10/2017-08/11/2017
+                            </div>
+                            <div className='para'> 
+                                
+                                Réalisation d’un projet informatique sur un serveur de production industriel.
+                                Configuration d’une supervision réseau à l’aide d’un logiciel de monitoring.
+                                
+                            </div>
+                           
                         </Paper>
                     </Container>
                 </Grid>

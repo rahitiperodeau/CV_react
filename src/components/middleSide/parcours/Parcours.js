@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
-import {parcoursStyle} from '../../../style';
+import './css/Parcours.css'
 
-const classes = parcoursStyle;
 
 class Parcours extends Component{
     constructor(props){
@@ -18,11 +16,9 @@ class Parcours extends Component{
         
         let display;
         if(titleParam==undefined){
-            //alert('titleParam undefined')
             return;
         }
         if (titleParam=='Parcours'){
-            //alert('titleParam Parcours')
             display=
                     <Grid 
                         container                     
@@ -32,47 +28,47 @@ class Parcours extends Component{
                     >
                         <Grid item xs={10} sm={5}>
                             <Container fixed>
-                                <Paper>
-                                    <Typography variant="h6">
+                                <Paper className='paper'>
+                                    <div className='date' >
                                         2019-2020
-                                    </Typography>
-                                    <Typography>
+                                    </div>
+                                    <div className='text'>
                                     5e année à CPE Lyon,
                                     majeure Conception logicielle et Big Data
-                                    </Typography>
+                                    </div>
 
-                                    <br/>
-                                    <Typography variant="h6">
+                                    
+                                    <div className='date'>
                                         2018-2019
-                                    </Typography>
-                                    <Typography>
+                                    </div>
+                                    <div className='text'>
                                     Année de césure; 
                                     Stage de 6 mois à l’étranger
-                                    </Typography>
+                                    </div>
 
-                                    <br/>
-                                    <Typography variant="h6">
+                                    
+                                    <div className='date'>
                                         2016-2018
-                                    </Typography>
-                                    <Typography>
+                                    </div>
+                                    <div className='text'>
                                     CPE Lyon, majeure Conception logicielle et Big Data
-                                    </Typography>
+                                    </div>
 
-                                    <br/>
-                                    <Typography variant="h6">
+                                    
+                                    <div className='date'>
                                         2014-2016
-                                    </Typography>
-                                    <Typography>
+                                    </div>
+                                    <div className='text'>
                                     Classes préparatoires à CPE Lyon en Maths Physique
-                                    </Typography>
+                                    </div>
 
-                                    <br/>
-                                    <Typography variant="h6">
+                                    
+                                    <div className='date'>
                                         2014
-                                    </Typography>
-                                    <Typography>
+                                    </div>
+                                    <div className='text'>
                                     Baccalauréat série S mention “Très Bien”, Lycée Paul Gauguin, Tahiti(Polynésie Française)
-                                    </Typography>
+                                    </div>
                                 </Paper>
                             </Container>
                         </Grid>

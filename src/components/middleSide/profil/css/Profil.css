@@ -1,0 +1,22 @@
+.paper{
+    margin-top:5%;
+    padding: 0 3% 3% 3%;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.sub_title{
+    font-size: 20px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.div_img{
+    height:100px;
+    width:100px
+}

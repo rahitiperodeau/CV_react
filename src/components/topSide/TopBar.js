@@ -26,7 +26,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { connect } from 'react-redux';
 
 
-const SimpleMenu=()=>{
+const TopBar=()=>{
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const classes = useStyles();
@@ -103,4 +103,4 @@ const SimpleMenu=()=>{
     )
 
 }
-export default connect()(SimpleMenu);
+export default connect()(TopBar);
